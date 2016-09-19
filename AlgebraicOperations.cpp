@@ -187,4 +187,27 @@ public:
     }
    }
 
+   /**
+   * Обчислює та виводить значення натурального логарифму аргумента. У випадку неможливості виконання операції виводить відповідне повідомлення
+   * @param manager Об'єкт класу InputManager
+   * @author Maksym
+   * @since 1.1
+   */
+   void naturalLogarithm(InputManager manager) 
+   {
+    if(manager.validate(Form1->Edit1->Text) && StrToFloat(Form1->Edit1->Text) >= 0)
+    {
+     float argument = StrToFloat(Form1->Edit1->Text);
+     float logarithm = log(argument);
+
+     Form1->Edit1->Text = FloatToStr(logarithm);
+     Form1->comma_btn->Enabled = true;
+    }
+    else
+    {
+     ShowMessage("Wrong input data");
+     manager.clean();
+    }
+   }
+
  };
