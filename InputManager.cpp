@@ -8,17 +8,14 @@ private:
 	double firstNum;
 	double secondNum;
 
-  /*
   public:
-    /**
-     * Перший операнд (для бінарних операцій)
-     */
-    //double f_num;
-    
-    /**
-     * Другий операнд (для бінарних операцій)
-     */
-    //double s_num;
+    double getFirstNum() {
+        return firstNum;
+    }
+
+    double getSecondNum() {
+        return secondNum;
+    }
 
 
     /**
